@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Form</title>
+</head>
+<body>
+  <h1>Enter Your Information</h1>
+
+  <form action="/submit" method="POST">
+    <label>Name: <input type="text" name="name" required></label><br><br>
+    <label>Email: <input type="email" name="email" required></label><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <% if (user) { %>
+    <h2>Submitted Info:</h2>
+    <p><strong>Name:</strong> <%= user.name %></p>
+    <p><strong>Email:</strong> <%= user.email %></p>
+  <% } %>
+</body>
+</html>
